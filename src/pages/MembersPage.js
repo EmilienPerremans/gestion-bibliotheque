@@ -1,80 +1,129 @@
 export default function MembersPage() {
-    const element = document.createElement('div');
-  
-    // Récupérer les membres depuis LocalStorage
+  const element = document.createElement('div');
+
+  // Fonction pour charger les membres depuis LocalStorage
+  const loadMembers = () => {
     const members = JSON.parse(localStorage.getItem('members')) || [];
-  
-    // Construire le tableau HTML pour afficher les membres
-    let membersTable = `
+    displayMembers(members);
+  };
+
+  // Fonction pour afficher les membres
+  const displayMembers = (members) => {
+    let membersList = `
       <div class="container mt-5">
         <h1>Liste des Membres</h1>
-        <table class="table table-striped mt-3">
-          <thead>
-            <tr>
-              <th>Nom</th>
-              <th>Prénom</th>
-              <th>Email</th>
-              <th>Numéro de téléphone</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
+        <div class="row">
     `;
-  
-    // Ajouter une ligne pour chaque membre avec les boutons Modifier et Supprimer
+
     members.forEach((member, index) => {
-      membersTable += `
-        <tr>
-          <td>${member.lastName}</td>
-          <td>${member.firstName}</td>
-          <td>${member.email}</td>
-          <td>${member.phone}</td>
-          <td>
-            <button class="btn btn-sm btn-primary edit-btn" data-index="${index}">Modifier</button>
-            <button class="btn btn-sm btn-danger delete-btn" data-index="${index}">Supprimer</button>
-          </td>
-        </tr>
-      `;
-    });
-  
-    // Fermer la table
-    membersTable += `
-          </tbody>
-        </table>
-      </div>
-    `;
-  
-    // Si aucun membre n'est trouvé, afficher un message alternatif
-    if (members.length === 0) {
-      membersTable = `
-        <div class="container mt-5">
-          <h1>Liste des Membres</h1>
-          <p>Aucun membre trouvé.</p>
+      membersList += `
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title">${member.firstName} ${member.lastName}</h5>
+              <p class="card-text"><strong>Email :</strong> ${member.email}</p>
+              <p class="card-text"><strong>Téléphone :</strong> ${member.phone}</p>
+              <button class="btn btn-primary edit-member-btn" data-index="${index}">Modifier</button>
+              <button class="btn btn-danger delete-member-btn" data-index="${index}">Supprimer</button>
+            </div>
+          </div>
         </div>
       `;
-    }
-  
-    element.innerHTML = membersTable;
-  
-    // Gérer la suppression d'un membre
-    element.querySelectorAll('.delete-btn').forEach((button) => {
+    });
+
+    membersList += `
+        </div>
+      </div>
+    `;
+
+    element.innerHTML = membersList;
+
+    // Ajouter les événements de clic pour les boutons Modifier et Supprimer
+    element.querySelectorAll('.edit-member-btn').forEach(button => {
       button.addEventListener('click', (e) => {
-        const memberIndex = e.target.getAttribute('data-index');
-        members.splice(memberIndex, 1); // Supprimer le membre de la liste
-        localStorage.setItem('members', JSON.stringify(members)); // Mettre à jour le LocalStorage
-        window.location.reload(); // Recharger la page pour mettre à jour l'affichage
+        const memberIndex = parseInt(e.target.getAttribute('data-index'), 10);
+        editMember(memberIndex, members);
       });
     });
-  
-    // Gérer la modification d'un membre
-    element.querySelectorAll('.edit-btn').forEach((button) => {
+
+    element.querySelectorAll('.delete-member-btn').forEach(button => {
       button.addEventListener('click', (e) => {
-        const memberIndex = e.target.getAttribute('data-index');
-        window.history.pushState(null, '', `/edit-member?index=${memberIndex}`);
-        window.dispatchEvent(new Event('popstate')); // Charger la page de modification
+        const memberIndex = parseInt(e.target.getAttribute('data-index'), 10);
+        deleteMember(memberIndex, members);
       });
     });
-  
-    return element;
-  }
-  
+  };
+
+  // Fonction pour éditer un membre
+  const editMember = (memberIndex, members) => {
+    const member = members[memberIndex];
+
+    // Afficher un formulaire pré-rempli pour modifier les informations du membre
+    const editForm = `
+      <div class="container mt-5">
+        <h1>Modifier le Membre</h1>
+        <form id="edit-member-form">
+          <div class="mb-3">
+            <label for="firstName" class="form-label">Prénom</label>
+            <input type="text" class="form-control" id="firstName" value="${member.firstName}" required>
+          </div>
+          <div class="mb-3">
+            <label for="lastName" class="form-label">Nom</label>
+            <input type="text" class="form-control" id="lastName" value="${member.lastName}" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" value="${member.email}" required>
+          </div>
+          <div class="mb-3">
+            <label for="phone" class="form-label">Téléphone</label>
+            <input type="text" class="form-control" id="phone" value="${member.phone}" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Enregistrer les modifications</button>
+          <button type="button" class="btn btn-secondary" id="cancel-edit-btn">Annuler</button>
+        </form>
+      </div>
+    `;
+
+    element.innerHTML = editForm;
+
+    // Gérer la soumission du formulaire de modification
+    element.querySelector('#edit-member-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Mettre à jour les informations du membre
+      members[memberIndex].firstName = document.getElementById('firstName').value;
+      members[memberIndex].lastName = document.getElementById('lastName').value;
+      members[memberIndex].email = document.getElementById('email').value;
+      members[memberIndex].phone = document.getElementById('phone').value;
+
+      // Mettre à jour le LocalStorage
+      localStorage.setItem('members', JSON.stringify(members));
+
+      // Recharger la liste des membres après la modification
+      loadMembers();
+    });
+
+    // Gérer l'annulation de la modification
+    document.getElementById('cancel-edit-btn').addEventListener('click', () => {
+      loadMembers(); // Recharger la liste des membres sans modification
+    });
+  };
+
+  // Fonction pour supprimer un membre
+  const deleteMember = (memberIndex, members) => {
+    // Supprimer le membre de la liste
+    members.splice(memberIndex, 1);
+
+    // Mettre à jour le LocalStorage
+    localStorage.setItem('members', JSON.stringify(members));
+
+    // Recharger la liste des membres après la suppression
+    loadMembers();
+  };
+
+  // Charger les membres lorsque la page est affichée
+  loadMembers();
+
+  return element;
+}

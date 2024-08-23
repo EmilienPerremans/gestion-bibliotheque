@@ -32,7 +32,7 @@
       "genre": "Philosophie",
       "year": 1942,
       "description": "Un homme face à l'absurdité de l'existence.",
-      "image": "https://via.placeholder.com/150?text=L'Étranger",
+      "image": "/images/L'Étranger.jpg",
       "quantity": 6
     },
     {
@@ -41,7 +41,7 @@
       "genre": "Roman",
       "year": 1857,
       "description": "Le destin tragique d'une femme insatisfaite de sa vie.",
-      "image": "https://via.placeholder.com/150?text=Madame+Bovary",
+      "image": "/images/Madame Bovary.jpg",
       "quantity": 2
     },
     {
@@ -50,7 +50,7 @@
       "genre": "Roman",
       "year": 1830,
       "description": "Une histoire d'ambition et d'amour sous la Restauration.",
-      "image": "https://via.placeholder.com/150?text=Le+Rouge+et+le+Noir",
+      "image": "/images/Le Rouge et le Noir.jpg",
       "quantity": 5
     },
     {
@@ -59,7 +59,7 @@
       "genre": "Poésie",
       "year": 1857,
       "description": "Un recueil de poèmes explorant la beauté et la douleur.",
-      "image": "https://via.placeholder.com/150?text=Les+Fleurs+du+Mal",
+      "image": "/images/Les Fleurs du mal.jpg",
       "quantity": 7
     },
     {
@@ -68,7 +68,7 @@
       "genre": "Roman",
       "year": 1913,
       "description": "Un voyage introspectif à travers les souvenirs.",
-      "image": "https://via.placeholder.com/150?text=À+la+recherche+du+temps+perdu",
+      "image": "/images/À la recherche du temps perdu.jpg",
       "quantity": 8
     },
     {
@@ -77,7 +77,7 @@
       "genre": "Philosophie",
       "year": 1759,
       "description": "Une satire philosophique sur l'optimisme.",
-      "image": "https://via.placeholder.com/150?text=Candide",
+      "image": "/images/Candide.jpg",
       "quantity": 5
     },
     {
@@ -86,7 +86,7 @@
       "genre": "Roman",
       "year": 1835,
       "description": "Un drame familial dans la société parisienne.",
-      "image": "https://via.placeholder.com/150?text=Le+Père+Goriot",
+      "image": "/images/Le Père Goriot.jpg",
       "quantity": 6
     },
     {
@@ -95,7 +95,7 @@
       "genre": "Aventure",
       "year": 1844,
       "description": "Une histoire de vengeance et de rédemption.",
-      "image": "https://via.placeholder.com/150?text=Le+Comte+de+Monte-Cristo",
+      "image": "/images/Le Comte de Monte-Cristo.jpg",
       "quantity": 7
     },
     {
@@ -104,7 +104,7 @@
       "genre": "Aventure",
       "year": 1872,
       "description": "L'aventure de Phileas Fogg pour faire le tour du monde.",
-      "image": "https://via.placeholder.com/150?text=Le+Tour+du+Monde",
+      "image": "/images/Le tour du monde en quatre-vingts jours.jpg",
       "quantity": 10
     },
     {
@@ -113,7 +113,7 @@
       "genre": "Épopée",
       "year": -800,
       "description": "Le voyage d'Ulysse pour rentrer chez lui après la guerre de Troie.",
-      "image": "https://via.placeholder.com/150?text=L'Odyssée",
+      "image": "/images/L'Odyssée.jpg",
       "quantity": 8
     },
     {
@@ -122,7 +122,7 @@
       "genre": "Philosophie",
       "year": 1915,
       "description": "Un homme se réveille un matin transformé en insecte.",
-      "image": "https://via.placeholder.com/150?text=La+Métamorphose",
+      "image": "/images/La Métamorphose.jpg",
       "quantity": 3
     },
     {
@@ -131,7 +131,7 @@
       "genre": "Science-fiction",
       "year": 1949,
       "description": "Un roman dystopique sur un régime totalitaire.",
-      "image": "https://via.placeholder.com/150?text=1984",
+      "image": "/images/1984.jpg",
       "quantity": 6
     },
     {
@@ -140,7 +140,7 @@
       "genre": "Science-fiction",
       "year": 1953,
       "description": "Dans un monde où les livres sont interdits, un pompier se rebelle.",
-      "image": "https://via.placeholder.com/150?text=Fahrenheit+451",
+      "image": "/images/Fahrenheit 451.jpg",
       "quantity": 4
     },
     {
@@ -149,7 +149,7 @@
       "genre": "Aventure",
       "year": 1851,
       "description": "L'histoire d'un capitaine obsédé par la chasse à la baleine blanche.",
-      "image": "https://via.placeholder.com/150?text=Moby+Dick",
+      "image": "/images/Moby Dick.jpg",
       "quantity": 7
     },
     {
@@ -158,7 +158,7 @@
       "genre": "Aventure",
       "year": 1844,
       "description": "Les aventures de d'Artagnan et des trois mousquetaires.",
-      "image": "https://via.placeholder.com/150?text=Les+Trois+Mousquetaires",
+      "image": "/images/Les Trois Mousquetaires.jpg",
       "quantity": 5
     },
     {
@@ -167,7 +167,7 @@
       "genre": "Aventure",
       "year": 1826,
       "description": "Un roman historique sur la guerre franco-indienne.",
-      "image": "https://via.placeholder.com/150?text=Le+Dernier+des+Mohicans",
+      "image": "/images/Le Dernier des Mohicans.jpg",
       "quantity": 6
     },
     {
@@ -176,7 +176,7 @@
       "genre": "Philosophie",
       "year": 1866,
       "description": "Un homme commet un meurtre et lutte avec sa conscience.",
-      "image": "https://via.placeholder.com/150?text=Crime+et+Châtiment",
+      "image": "/images/Crime et Châtiment.jpg",
       "quantity": 5
     }
   ]
