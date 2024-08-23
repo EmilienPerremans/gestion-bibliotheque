@@ -1,0 +1,29 @@
+{
+    "members": [
+      { "lastName": "Dupont", "firstName": "Jean", "email": "jean.dupont@example.com", "phone": "0102030405" },
+      { "lastName": "Martin", "firstName": "Claire", "email": "claire.martin@example.com", "phone": "0607080910" },
+      { "lastName": "Leclerc", "firstName": "Sophie", "email": "sophie.leclerc@example.com", "phone": "0708091011" }
+    ],
+    "books": [
+      { "title": "Le Petit Prince", "author": "Antoine de Saint-Exupéry", "genre": "Fiction", "year": 1943, "description": "Un conte philosophique", "image": "https://via.placeholder.com/150" },
+      { "title": "1984", "author": "George Orwell", "genre": "Science-fiction", "year": 1949, "description": "Dystopie classique", "image": "https://via.placeholder.com/150" },
+      { "title": "Les Misérables", "author": "Victor Hugo", "genre": "Classique", "year": 1862, "description": "Roman historique", "image": "https://via.placeholder.com/150" }
+    ],
+    "borrows": [
+      {
+        "memberIndex": 0,
+        "bookIndex": 1,
+        "borrowDate": "2024-08-01",
+        "returnDate": "2024-08-15",
+        "actualReturnDate": null
+      },
+      {
+        "memberIndex": 2,
+        "bookIndex": 0,
+        "borrowDate": "2024-07-20",
+        "returnDate": "2024-08-03",
+        "actualReturnDate": "2024-08-01"
+      }
+    ]
+  }
+  

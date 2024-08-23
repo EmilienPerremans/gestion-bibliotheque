@@ -1,0 +1,30 @@
+
+
+• Emprunts
+– Membre (référence)
+– Livre (référence)
+– Date d’emprunt
+– Date de retour prévu (2 semaines après la date d’emprunt)
+– Date de retour effectif
+Vous pouvez ajouter d’autres informations si vous le souhaitez.
+Fonctionnalités du SiteSPA : Le site doit être développé en utilisant le mini-framework vu au
+cours.
+• Navigation par genres : Permettez aux utilisateurs de filtrer les livres
+par genres.
+• Recherche de livres : Implémentez une fonction de recherche pour trouver
+des livres spécifiques.
+• Pagination des livres : Les livres doivent être affichés par pages pour
+faciliter la navigation.
+• Gestion des emprunts :
+– Ajout d’emprunts avec les informations du membre.
+– Modification des dates de retour.
+– Gestion des retours de livres.
+– Suppression d’emprunts.
+• Gestion des membres :
+– Ajout de nouveaux membres.
+– Modification des informations des membres.
+– Suppression de membres.
+Développement et Stockage
+• Les données des livres seront stockées dans un fichier JSON.
+• La gestion des membres et des emprunts sera effectuée via le LocalStorage
+du navigateur pour maintenir l’état pendant la session de l’utilisateur.
