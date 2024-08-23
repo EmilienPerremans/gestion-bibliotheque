@@ -22,10 +22,6 @@ export default function AddBookPage() {
           <input type="number" class="form-control" id="year" required>
         </div>
         <div class="mb-3">
-          <label for="quantity" class="form-label">Quantité en Réserve</label>
-          <input type="number" class="form-control" id="quantity" min="1" required>
-        </div>
-        <div class="mb-3">
           <label for="description" class="form-label">Description</label>
           <textarea class="form-control" id="description" rows="3" required></textarea>
         </div>
@@ -33,7 +29,11 @@ export default function AddBookPage() {
           <label for="image" class="form-label">URL de l'image</label>
           <input type="text" class="form-control" id="image">
         </div>
-        <button type="submit" class="btn btn-primary">Enregistrer le Livre</button>
+        <div class="mb-3">
+          <label for="quantity" class="form-label">Quantité</label>
+          <input type="number" class="form-control" id="quantity" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Ajouter le Livre</button>
       </form>
       <div id="confirmation-message" class="mt-3" style="display: none;">
         <p class="alert alert-success">Le livre a été ajouté avec succès !</p>
@@ -48,27 +48,34 @@ export default function AddBookPage() {
     const author = document.getElementById('author').value;
     const genre = document.getElementById('genre').value;
     const year = document.getElementById('year').value;
-    const quantity = parseInt(document.getElementById('quantity').value, 10);  // Nouvelle quantité
     const description = document.getElementById('description').value;
-    const image = document.getElementById('image').value;
+    let image = document.getElementById('image').value;
+    const quantity = parseInt(document.getElementById('quantity').value, 10);
+
+    // Vérifier si l'image est vide et attribuer une image par défaut
+    if (!image) {
+      image = 'https://via.placeholder.com/150?text=Aucune+photo'; // Image par défaut
+    }
 
     const newBook = {
-      title,
-      author,
-      genre,
-      year,
-      quantity,  // Quantité ajoutée au livre
-      description,
-      image,
-      isBorrowed: false // Initialiser comme non emprunté
+      title: title,
+      author: author,
+      genre: genre,
+      year: year,
+      description: description,
+      image: image,
+      quantity: quantity
     };
 
-    let books = JSON.parse(localStorage.getItem('books')) || [];
+    // Ajouter le livre au LocalStorage
+    const books = JSON.parse(localStorage.getItem('books')) || [];
     books.push(newBook);
     localStorage.setItem('books', JSON.stringify(books));
 
+    // Afficher le message de confirmation
     document.getElementById('confirmation-message').style.display = 'block';
 
+    // Réinitialiser le formulaire
     e.target.reset();
   });
 

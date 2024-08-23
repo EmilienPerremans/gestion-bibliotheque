@@ -10,14 +10,17 @@ export default function BooksPage() {
       <div class="row">
   `;
 
-  books.forEach((book, index) => {
+  books.forEach(book => {
     const availability = book.quantity > 0 ? 'Disponible' : 'Non disponible';
     const availabilityClass = book.quantity > 0 ? 'text-success' : 'text-danger';
+
+    // Utiliser l'image du livre ou une image par défaut si aucune image n'est fournie
+    const bookImage = book.image || 'https://via.placeholder.com/150?text=Aucune+photo';
 
     booksList += `
       <div class="col-md-4">
         <div class="card mb-4">
-          <img src="${book.image}" class="card-img-top" alt="${book.title}">
+          <img src="${bookImage}" class="card-img-top" alt="${book.title}">
           <div class="card-body">
             <h5 class="card-title">${book.title}</h5>
             <p class="card-text"><strong>Auteur :</strong> ${book.author}</p>
@@ -25,8 +28,6 @@ export default function BooksPage() {
             <p class="card-text"><strong>Année :</strong> ${book.year}</p>
             <p class="card-text">${book.description}</p>
             <p class="card-text ${availabilityClass}"><strong>État :</strong> ${availability} (${book.quantity} en stock)</p>
-            <button class="btn btn-primary edit-book-btn" data-index="${index}">Modifier</button>
-            <button class="btn btn-danger delete-book-btn" data-index="${index}">Supprimer</button>
           </div>
         </div>
       </div>
@@ -39,25 +40,6 @@ export default function BooksPage() {
   `;
 
   element.innerHTML = booksList;
-
-  // Gérer la suppression d'un livre
-  element.querySelectorAll('.delete-book-btn').forEach((button) => {
-    button.addEventListener('click', (e) => {
-      const bookIndex = e.target.getAttribute('data-index');
-      books.splice(bookIndex, 1); // Supprimer le livre de la liste
-      localStorage.setItem('books', JSON.stringify(books)); // Mettre à jour le LocalStorage
-      window.location.reload(); // Recharger la page pour mettre à jour l'affichage
-    });
-  });
-
-  // Gérer la modification d'un livre (rediriger vers une page de modification)
-  element.querySelectorAll('.edit-book-btn').forEach((button) => {
-    button.addEventListener('click', (e) => {
-      const bookIndex = e.target.getAttribute('data-index');
-      window.history.pushState(null, '', `/edit-book?index=${bookIndex}`);
-      window.dispatchEvent(new Event('popstate')); // Charger la page de modification
-    });
-  });
 
   return element;
 }
