@@ -13,9 +13,6 @@ export default function HomePage() {
           <a href="/members" class="btn btn-primary w-100" data-link>Gérer les membres</a>
         </div>
         <div class="col-md-4 mb-3">
-          <a href="/add-book" class="btn btn-success w-100" data-link>Ajouter un livre</a>
-        </div>
-        <div class="col-md-4 mb-3">
           <a href="/add-borrow" class="btn btn-success w-100" data-link>Ajouter un emprunt</a>
         </div>
         <div class="col-md-4 mb-3">
