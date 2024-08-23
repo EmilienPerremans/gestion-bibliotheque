@@ -1,0 +1,5 @@
+.book-image {
+  width: 150px; /* Largeur fixe */
+  height: 200px; /* Hauteur fixe */
+  object-fit: cover; /* Redimensionner l'image tout en gardant ses proportions */
+}

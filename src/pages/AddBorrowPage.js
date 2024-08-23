@@ -1,101 +1,114 @@
 export default function AddBorrowPage() {
   const element = document.createElement('div');
 
-  // Récupérer les membres et les livres depuis LocalStorage
-  const members = JSON.parse(localStorage.getItem('members')) || [];
-  const books = JSON.parse(localStorage.getItem('books')) || [];
-  const borrows = JSON.parse(localStorage.getItem('borrows')) || [];
+  // Fonction pour charger les livres depuis le LocalStorage
+  const loadBooks = async () => {
+    // Charger les livres depuis LocalStorage
+    const books = JSON.parse(localStorage.getItem('books')) || [];
+    displayBorrowForm(books); // Afficher le formulaire d'emprunt avec les livres disponibles
+  };
 
-  // Construire la liste des membres et des livres disponibles
-  let memberOptions = '';
-  members.forEach((member, index) => {
-    memberOptions += `<option value="${index}">${member.firstName} ${member.lastName}</option>`;
-  });
+  // Fonction pour afficher le formulaire d'emprunt
+  const displayBorrowForm = (books) => {
+    // Récupérer les membres depuis le LocalStorage
+    const members = JSON.parse(localStorage.getItem('members')) || [];
 
-  let bookOptions = '';
-  books.forEach((book, index) => {
-    if (book.quantity > 0) {
-      bookOptions += `<option value="${index}">${book.title} par ${book.author} (disponible: ${book.quantity})</option>`;
-    }
-  });
+    let bookOptions = '';
+    books.forEach((book, index) => {
+      if (book.quantity > 0) { // Afficher uniquement les livres disponibles
+        bookOptions += `<option value="${index}">${book.title} (Disponible: ${book.quantity})</option>`;
+      }
+    });
 
-  element.innerHTML = `
-    <div class="container mt-5">
-      <h1>Ajouter un Emprunt</h1>
-      <form id="borrow-form">
-        <div class="mb-3">
-          <label for="member" class="form-label">Membre</label>
-          <select class="form-select" id="member" required>
-            <option value="">Sélectionnez un membre</option>
-            ${memberOptions}
-          </select>
+    let memberOptions = '';
+    members.forEach((member, index) => {
+      memberOptions += `<option value="${index}">${member.firstName} ${member.lastName}</option>`;
+    });
+
+    element.innerHTML = `
+      <div class="container mt-5">
+        <h1>Emprunter un Livre</h1>
+        <form id="borrow-form">
+          <div class="mb-3">
+            <label for="bookSelect" class="form-label">Sélectionnez un livre</label>
+            <select class="form-select" id="bookSelect" required>
+              ${bookOptions}
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="memberSelect" class="form-label">Sélectionnez un membre</label>
+            <select class="form-select" id="memberSelect" required>
+              ${memberOptions}
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Valider l'emprunt</button>
+        </form>
+        <div id="confirmation-message" class="mt-3" style="display: none;">
+          <p class="alert alert-success">L'emprunt a été enregistré avec succès !</p>
         </div>
-        <div class="mb-3">
-          <label for="book" class="form-label">Livre</label>
-          <select class="form-select" id="book" required>
-            <option value="">Sélectionnez un livre</option>
-            ${bookOptions}
-          </select>
+        <div id="error-message" class="mt-3" style="display: none;">
+          <p class="alert alert-danger">Le membre a déjà emprunté ce livre !</p>
         </div>
-        <div class="mb-3">
-          <label for="borrowDate" class="form-label">Date d'emprunt</label>
-          <input type="date" class="form-control" id="borrowDate" required>
-        </div>
-        <button type="submit" class="btn btn-primary">Enregistrer l'Emprunt</button>
-      </form>
-      <div id="error-message" class="mt-3" style="display: none;">
-        <p class="alert alert-danger">Ce membre a déjà emprunté ce livre ou il n'y a plus de stock disponible.</p>
       </div>
-      <div id="confirmation-message" class="mt-3" style="display: none;">
-        <p class="alert alert-success">L'emprunt a été enregistré avec succès !</p>
-      </div>
-    </div>
-  `;
+    `;
 
-  element.querySelector('#borrow-form').addEventListener('submit', (e) => {
-    e.preventDefault();
+    // Gérer la soumission du formulaire d'emprunt
+    element.querySelector('#borrow-form').addEventListener('submit', (e) => {
+      e.preventDefault();
 
-    const memberIndex = document.getElementById('member').value;
-    const bookIndex = document.getElementById('book').value;
-    const borrowDate = document.getElementById('borrowDate').value;
+      const bookIndex = parseInt(document.getElementById('bookSelect').value, 10);
+      const memberIndex = parseInt(document.getElementById('memberSelect').value, 10);
 
-    // Vérifier si ce membre a déjà emprunté ce livre
-    const existingBorrow = borrows.find(borrow => borrow.memberIndex == memberIndex && borrow.bookIndex == bookIndex && !borrow.actualReturnDate);
+      // Récupérer les emprunts depuis LocalStorage
+      const borrows = JSON.parse(localStorage.getItem('borrows')) || [];
 
-    if (existingBorrow || books[bookIndex].quantity <= 0) {
-      // Afficher un message d'erreur si le même membre a déjà emprunté le même livre ou si le stock est épuisé
-      document.getElementById('error-message').style.display = 'block';
-      return;
-    }
+      // Vérifier si le membre a déjà emprunté le même livre
+      const alreadyBorrowed = borrows.some(
+        (borrow) => borrow.bookIndex === bookIndex && borrow.memberIndex === memberIndex && !borrow.actualReturnDate
+      );
 
-    // Calculer la date de retour prévue (2 semaines après la date d'emprunt)
-    const returnDate = new Date(borrowDate);
-    returnDate.setDate(returnDate.getDate() + 14);
-    const returnDateString = returnDate.toISOString().split('T')[0];
+      if (alreadyBorrowed) {
+        // Afficher un message d'erreur si le membre a déjà emprunté ce livre
+        document.getElementById('error-message').style.display = 'block';
+      } else {
+        // Créer un nouvel emprunt
+        const newBorrow = {
+          bookIndex,
+          memberIndex,
+          borrowDate: new Date().toISOString().split('T')[0],
+          returnDate: new Date(new Date().getTime() + 14 * 24 * 60 * 60 * 1000).toISOString().split('T')[0], // Date de retour prévue (14 jours plus tard)
+          actualReturnDate: null
+        };
 
-    const newBorrow = {
-      memberIndex: memberIndex,
-      bookIndex: bookIndex,
-      borrowDate: borrowDate,
-      returnDate: returnDateString,
-      actualReturnDate: null // Pas encore retourné
-    };
+        // Ajouter l'emprunt aux emprunts existants
+        borrows.push(newBorrow);
+        localStorage.setItem('borrows', JSON.stringify(borrows));
 
-    // Ajouter l'emprunt au LocalStorage
-    borrows.push(newBorrow);
-    localStorage.setItem('borrows', JSON.stringify(borrows));
+        // Mettre à jour la quantité du livre dans LocalStorage
+        books[bookIndex].quantity -= 1;
 
-    // Décrémenter la quantité du livre
-    books[bookIndex].quantity -= 1;
-    localStorage.setItem('books', JSON.stringify(books));
+        // Vérifier si le livre est épuisé et le retirer du formulaire si c'est le cas
+        if (books[bookIndex].quantity === 0) {
+          document.querySelector(`#bookSelect option[value="${bookIndex}"]`).remove();
+        }
 
-    // Masquer le message d'erreur et afficher le message de confirmation
-    document.getElementById('error-message').style.display = 'none';
-    document.getElementById('confirmation-message').style.display = 'block';
+        // Mettre à jour LocalStorage avec la nouvelle quantité de livres
+        localStorage.setItem('books', JSON.stringify(books));
 
-    // Réinitialiser le formulaire
-    e.target.reset();
-  });
+        // Afficher le message de confirmation
+        document.getElementById('confirmation-message').style.display = 'block';
+
+        // Cacher le message d'erreur au cas où il avait été affiché précédemment
+        document.getElementById('error-message').style.display = 'none';
+
+        // Réinitialiser le formulaire
+        e.target.reset();
+      }
+    });
+  };
+
+  // Charger les livres lorsque la page est affichée
+  loadBooks();
 
   return element;
 }

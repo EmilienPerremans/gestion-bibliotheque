@@ -44,33 +44,34 @@ export default function AddBookPage() {
   element.querySelector('#book-form').addEventListener('submit', (e) => {
     e.preventDefault();
 
+    // Récupérer les valeurs du formulaire
     const title = document.getElementById('title').value;
     const author = document.getElementById('author').value;
     const genre = document.getElementById('genre').value;
-    const year = document.getElementById('year').value;
+    const year = parseInt(document.getElementById('year').value, 10);
     const description = document.getElementById('description').value;
-    let image = document.getElementById('image').value;
+    const image = document.getElementById('image').value || 'https://via.placeholder.com/150?text=Aucune+photo';
     const quantity = parseInt(document.getElementById('quantity').value, 10);
 
-    // Vérifier si l'image est vide et attribuer une image par défaut
-    if (!image) {
-      image = 'https://via.placeholder.com/150?text=Aucune+photo'; // Image par défaut
-    }
-
+    // Créer un nouvel objet livre
     const newBook = {
-      title: title,
-      author: author,
-      genre: genre,
-      year: year,
-      description: description,
-      image: image,
-      quantity: quantity
+      title,
+      author,
+      genre,
+      year,
+      description,
+      image,
+      quantity
     };
 
-    // Récupérer les livres actuels dans LocalStorage
+    // Récupérer les livres actuels depuis LocalStorage
     const books = JSON.parse(localStorage.getItem('books')) || [];
+
+    // Ajouter le nouveau livre à la liste
     books.push(newBook);
-    localStorage.setItem('books', JSON.stringify(books)); // Mettre à jour LocalStorage
+
+    // Mettre à jour LocalStorage
+    localStorage.setItem('books', JSON.stringify(books));
 
     // Afficher le message de confirmation
     document.getElementById('confirmation-message').style.display = 'block';

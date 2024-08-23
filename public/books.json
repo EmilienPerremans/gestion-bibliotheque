@@ -5,8 +5,8 @@
       "genre": "Conte",
       "year": 1943,
       "description": "Un conte poétique sur la vie, l'amitié, et la perte.",
-      "image": "https://via.placeholder.com/150?text=Le+Petit+Prince",
-      "quantity": 5
+      "image": "/images/petit-prince.jpg",
+      "quantity" : 23
     },
     {
       "title": "Les Misérables",
@@ -14,7 +14,7 @@
       "genre": "Roman",
       "year": 1862,
       "description": "Un roman sur la justice et la rédemption.",
-      "image": "https://via.placeholder.com/150?text=Les+Misérables",
+      "image": "/images/Les Misérables.jpg",
       "quantity": 3
     },
     {
@@ -23,7 +23,7 @@
       "genre": "Roman",
       "year": 1885,
       "description": "Une critique sociale sur la vie des mineurs.",
-      "image": "https://via.placeholder.com/150?text=Germinal",
+      "image": "/images/Germinal.jpg",
       "quantity": 4
     },
     {
@@ -177,213 +177,6 @@
       "year": 1866,
       "description": "Un homme commet un meurtre et lutte avec sa conscience.",
       "image": "https://via.placeholder.com/150?text=Crime+et+Châtiment",
-      "quantity": 5
-    },
-    {
-      "title": "Don Quichotte",
-      "author": "Miguel de Cervantes",
-      "genre": "Aventure",
-      "year": 1605,
-      "description": "Les aventures d'un chevalier errant et de son écuyer Sancho Panza.",
-      "image": "https://via.placeholder.com/150?text=Don+Quichotte",
-      "quantity": 4
-    },
-    {
-      "title": "Jane Eyre",
-      "author": "Charlotte Brontë",
-      "genre": "Roman",
-      "year": 1847,
-      "description": "L'histoire d'une orpheline qui devient gouvernante.",
-      "image": "https://via.placeholder.com/150?text=Jane+Eyre",
-      "quantity": 6
-    },
-    {
-      "title": "Les Hauts de Hurlevent",
-      "author": "Emily Brontë",
-      "genre": "Roman",
-      "year": 1847,
-      "description": "Une histoire de passion et de vengeance sur les landes anglaises.",
-      "image": "https://via.placeholder.com/150?text=Les+Hauts+de+Hurlevent",
-      "quantity": 7
-    },
-    {
-      "title": "Anna Karénine",
-      "author": "Léon Tolstoï",
-      "genre": "Roman",
-      "year": 1877,
-      "description": "Une tragédie sur l'amour et la société russe.",
-      "image": "https://via.placeholder.com/150?text=Anna+Karénine",
-      "quantity": 4
-    },
-    {
-      "title": "Guerre et Paix",
-      "author": "Léon Tolstoï",
-      "genre": "Historique",
-      "year": 1869,
-      "description": "Un récit épique sur la Russie pendant les guerres napoléoniennes.",
-      "image": "https://via.placeholder.com/150?text=Guerre+et+Paix",
-      "quantity": 3
-    },
-    {
-      "title": "Le Vieil Homme et la Mer",
-      "author": "Ernest Hemingway",
-      "genre": "Aventure",
-      "year": 1952,
-      "description": "Un vieux pêcheur lutte pour attraper un poisson géant.",
-      "image": "https://via.placeholder.com/150?text=Le+Vieil+Homme+et+la+Mer",
-      "quantity": 5
-    },
-    {
-      "title": "L'Iliade",
-      "author": "Homère",
-      "genre": "Épopée",
-      "year": -750,
-      "description": "Le récit épique de la guerre de Troie.",
-      "image": "https://via.placeholder.com/150?text=L'Iliade",
-      "quantity": 8
-    },
-    {
-      "title": "Frankenstein",
-      "author": "Mary Shelley",
-      "genre": "Horreur",
-      "year": 1818,
-      "description": "Un scientifique crée un être monstrueux avec des conséquences tragiques.",
-      "image": "https://via.placeholder.com/150?text=Frankenstein",
-      "quantity": 5
-    },
-    {
-      "title": "Dracula",
-      "author": "Bram Stoker",
-      "genre": "Horreur",
-      "year": 1897,
-      "description": "Le classique du vampire et de l'horreur gothique.",
-      "image": "https://via.placeholder.com/150?text=Dracula",
-      "quantity": 4
-    },
-    {
-      "title": "Le Seigneur des Anneaux",
-      "author": "J.R.R. Tolkien",
-      "genre": "Fantasy",
-      "year": 1954,
-      "description": "Une quête épique pour détruire l'Anneau unique.",
-      "image": "https://via.placeholder.com/150?text=Le+Seigneur+des+Anneaux",
-      "quantity": 7
-    },
-    {
-      "title": "Le Hobbit",
-      "author": "J.R.R. Tolkien",
-      "genre": "Fantasy",
-      "year": 1937,
-      "description": "Les aventures de Bilbo Baggins dans un monde fantastique.",
-      "image": "https://via.placeholder.com/150?text=Le+Hobbit",
-      "quantity": 6
-    },
-    {
-      "title": "Harry Potter à l'école des sorciers",
-      "author": "J.K. Rowling",
-      "genre": "Fantasy",
-      "year": 1997,
-      "description": "Les débuts d'Harry Potter à Poudlard, l'école des sorciers.",
-      "image": "https://via.placeholder.com/150?text=Harry+Potter+1",
-      "quantity": 10
-    },
-    {
-      "title": "L'Attrape-Cœurs",
-      "author": "J.D. Salinger",
-      "genre": "Roman",
-      "year": 1951,
-      "description": "Un adolescent en rébellion contre la société.",
-      "image": "https://via.placeholder.com/150?text=L'Attrape-Cœurs",
-      "quantity": 4
-    },
-    {
-      "title": "Les Aventures de Tom Sawyer",
-      "author": "Mark Twain",
-      "genre": "Aventure",
-      "year": 1876,
-      "description": "Les aventures d'un garçon espiègle dans le sud des États-Unis.",
-      "image": "https://via.placeholder.com/150?text=Tom+Sawyer",
-      "quantity": 5
-    },
-    {
-      "title": "Les Aventures d'Alice au pays des merveilles",
-      "author": "Lewis Carroll",
-      "genre": "Fantasy",
-      "year": 1865,
-      "description": "Les aventures fantastiques d'Alice dans un monde merveilleux.",
-      "image": "https://via.placeholder.com/150?text=Alice+au+pays+des+merveilles",
-      "quantity": 6
-    },
-    {
-      "title": "Peter Pan",
-      "author": "J.M. Barrie",
-      "genre": "Fantasy",
-      "year": 1911,
-      "description": "L'histoire du garçon qui ne voulait pas grandir.",
-      "image": "https://via.placeholder.com/150?text=Peter+Pan",
-      "quantity": 7
-    },
-    {
-      "title": "L'Île au trésor",
-      "author": "Robert Louis Stevenson",
-      "genre": "Aventure",
-      "year": 1883,
-      "description": "Une chasse au trésor remplie de pirates et de dangers.",
-      "image": "https://via.placeholder.com/150?text=L'Île+au+trésor",
-      "quantity": 4
-    },
-    {
-      "title": "Le Magicien d'Oz",
-      "author": "L. Frank Baum",
-      "genre": "Fantasy",
-      "year": 1900,
-      "description": "Dorothy et ses amis partent à la recherche du Magicien d'Oz.",
-      "image": "https://via.placeholder.com/150?text=Le+Magicien+d'Oz",
-      "quantity": 6
-    },
-    {
-      "title": "Les Contes de Grimm",
-      "author": "Jacob et Wilhelm Grimm",
-      "genre": "Conte",
-      "year": 1812,
-      "description": "Un recueil de contes classiques pour enfants.",
-      "image": "https://via.placeholder.com/150?text=Contes+de+Grimm",
-      "quantity": 5
-    },
-    {
-      "title": "Les Contes d'Andersen",
-      "author": "Hans Christian Andersen",
-      "genre": "Conte",
-      "year": 1837,
-      "description": "Un recueil de contes célèbres, dont 'La Petite Sirène'.",
-      "image": "https://via.placeholder.com/150?text=Contes+d'Andersen",
-      "quantity": 4
-    },
-    {
-      "title": "Les Mille et Une Nuits",
-      "author": "Anonyme",
-      "genre": "Conte",
-      "year": 800,
-      "description": "Un recueil d'histoires racontées par Shéhérazade pour échapper à la mort.",
-      "image": "https://via.placeholder.com/150?text=Les+Mille+et+Une+Nuits",
-      "quantity": 5
-    },
-    {
-      "title": "Le Livre de la jungle",
-      "author": "Rudyard Kipling",
-      "genre": "Aventure",
-      "year": 1894,
-      "description": "Les aventures de Mowgli, un garçon élevé par des loups dans la jungle.",
-      "image": "https://via.placeholder.com/150?text=Le+Livre+de+la+jungle",
-      "quantity": 6
-    },
-    {
-      "title": "Les Voyages de Gulliver",
-      "author": "Jonathan Swift",
-      "genre": "Aventure",
-      "year": 1726,
-      "description": "Les aventures satiriques de Gulliver dans des terres fantastiques.",
-      "image": "https://via.placeholder.com/150?text=Les+Voyages+de+Gulliver",
       "quantity": 5
     }
   ]
