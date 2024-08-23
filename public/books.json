@@ -1,0 +1,390 @@
+[
+    {
+      "title": "Le Petit Prince",
+      "author": "Antoine de Saint-Exupéry",
+      "genre": "Conte",
+      "year": 1943,
+      "description": "Un conte poétique sur la vie, l'amitié, et la perte.",
+      "image": "https://via.placeholder.com/150?text=Le+Petit+Prince",
+      "quantity": 5
+    },
+    {
+      "title": "Les Misérables",
+      "author": "Victor Hugo",
+      "genre": "Roman",
+      "year": 1862,
+      "description": "Un roman sur la justice et la rédemption.",
+      "image": "https://via.placeholder.com/150?text=Les+Misérables",
+      "quantity": 3
+    },
+    {
+      "title": "Germinal",
+      "author": "Émile Zola",
+      "genre": "Roman",
+      "year": 1885,
+      "description": "Une critique sociale sur la vie des mineurs.",
+      "image": "https://via.placeholder.com/150?text=Germinal",
+      "quantity": 4
+    },
+    {
+      "title": "L'Étranger",
+      "author": "Albert Camus",
+      "genre": "Philosophie",
+      "year": 1942,
+      "description": "Un homme face à l'absurdité de l'existence.",
+      "image": "https://via.placeholder.com/150?text=L'Étranger",
+      "quantity": 6
+    },
+    {
+      "title": "Madame Bovary",
+      "author": "Gustave Flaubert",
+      "genre": "Roman",
+      "year": 1857,
+      "description": "Le destin tragique d'une femme insatisfaite de sa vie.",
+      "image": "https://via.placeholder.com/150?text=Madame+Bovary",
+      "quantity": 2
+    },
+    {
+      "title": "Le Rouge et le Noir",
+      "author": "Stendhal",
+      "genre": "Roman",
+      "year": 1830,
+      "description": "Une histoire d'ambition et d'amour sous la Restauration.",
+      "image": "https://via.placeholder.com/150?text=Le+Rouge+et+le+Noir",
+      "quantity": 5
+    },
+    {
+      "title": "Les Fleurs du mal",
+      "author": "Charles Baudelaire",
+      "genre": "Poésie",
+      "year": 1857,
+      "description": "Un recueil de poèmes explorant la beauté et la douleur.",
+      "image": "https://via.placeholder.com/150?text=Les+Fleurs+du+Mal",
+      "quantity": 7
+    },
+    {
+      "title": "À la recherche du temps perdu",
+      "author": "Marcel Proust",
+      "genre": "Roman",
+      "year": 1913,
+      "description": "Un voyage introspectif à travers les souvenirs.",
+      "image": "https://via.placeholder.com/150?text=À+la+recherche+du+temps+perdu",
+      "quantity": 8
+    },
+    {
+      "title": "Candide",
+      "author": "Voltaire",
+      "genre": "Philosophie",
+      "year": 1759,
+      "description": "Une satire philosophique sur l'optimisme.",
+      "image": "https://via.placeholder.com/150?text=Candide",
+      "quantity": 5
+    },
+    {
+      "title": "Le Père Goriot",
+      "author": "Honoré de Balzac",
+      "genre": "Roman",
+      "year": 1835,
+      "description": "Un drame familial dans la société parisienne.",
+      "image": "https://via.placeholder.com/150?text=Le+Père+Goriot",
+      "quantity": 6
+    },
+    {
+      "title": "Le Comte de Monte-Cristo",
+      "author": "Alexandre Dumas",
+      "genre": "Aventure",
+      "year": 1844,
+      "description": "Une histoire de vengeance et de rédemption.",
+      "image": "https://via.placeholder.com/150?text=Le+Comte+de+Monte-Cristo",
+      "quantity": 7
+    },
+    {
+      "title": "Le tour du monde en quatre-vingts jours",
+      "author": "Jules Verne",
+      "genre": "Aventure",
+      "year": 1872,
+      "description": "L'aventure de Phileas Fogg pour faire le tour du monde.",
+      "image": "https://via.placeholder.com/150?text=Le+Tour+du+Monde",
+      "quantity": 10
+    },
+    {
+      "title": "L'Odyssée",
+      "author": "Homère",
+      "genre": "Épopée",
+      "year": -800,
+      "description": "Le voyage d'Ulysse pour rentrer chez lui après la guerre de Troie.",
+      "image": "https://via.placeholder.com/150?text=L'Odyssée",
+      "quantity": 8
+    },
+    {
+      "title": "La Métamorphose",
+      "author": "Franz Kafka",
+      "genre": "Philosophie",
+      "year": 1915,
+      "description": "Un homme se réveille un matin transformé en insecte.",
+      "image": "https://via.placeholder.com/150?text=La+Métamorphose",
+      "quantity": 3
+    },
+    {
+      "title": "1984",
+      "author": "George Orwell",
+      "genre": "Science-fiction",
+      "year": 1949,
+      "description": "Un roman dystopique sur un régime totalitaire.",
+      "image": "https://via.placeholder.com/150?text=1984",
+      "quantity": 6
+    },
+    {
+      "title": "Fahrenheit 451",
+      "author": "Ray Bradbury",
+      "genre": "Science-fiction",
+      "year": 1953,
+      "description": "Dans un monde où les livres sont interdits, un pompier se rebelle.",
+      "image": "https://via.placeholder.com/150?text=Fahrenheit+451",
+      "quantity": 4
+    },
+    {
+      "title": "Moby Dick",
+      "author": "Herman Melville",
+      "genre": "Aventure",
+      "year": 1851,
+      "description": "L'histoire d'un capitaine obsédé par la chasse à la baleine blanche.",
+      "image": "https://via.placeholder.com/150?text=Moby+Dick",
+      "quantity": 7
+    },
+    {
+      "title": "Les Trois Mousquetaires",
+      "author": "Alexandre Dumas",
+      "genre": "Aventure",
+      "year": 1844,
+      "description": "Les aventures de d'Artagnan et des trois mousquetaires.",
+      "image": "https://via.placeholder.com/150?text=Les+Trois+Mousquetaires",
+      "quantity": 5
+    },
+    {
+      "title": "Le Dernier des Mohicans",
+      "author": "James Fenimore Cooper",
+      "genre": "Aventure",
+      "year": 1826,
+      "description": "Un roman historique sur la guerre franco-indienne.",
+      "image": "https://via.placeholder.com/150?text=Le+Dernier+des+Mohicans",
+      "quantity": 6
+    },
+    {
+      "title": "Crime et Châtiment",
+      "author": "Fiodor Dostoïevski",
+      "genre": "Philosophie",
+      "year": 1866,
+      "description": "Un homme commet un meurtre et lutte avec sa conscience.",
+      "image": "https://via.placeholder.com/150?text=Crime+et+Châtiment",
+      "quantity": 5
+    },
+    {
+      "title": "Don Quichotte",
+      "author": "Miguel de Cervantes",
+      "genre": "Aventure",
+      "year": 1605,
+      "description": "Les aventures d'un chevalier errant et de son écuyer Sancho Panza.",
+      "image": "https://via.placeholder.com/150?text=Don+Quichotte",
+      "quantity": 4
+    },
+    {
+      "title": "Jane Eyre",
+      "author": "Charlotte Brontë",
+      "genre": "Roman",
+      "year": 1847,
+      "description": "L'histoire d'une orpheline qui devient gouvernante.",
+      "image": "https://via.placeholder.com/150?text=Jane+Eyre",
+      "quantity": 6
+    },
+    {
+      "title": "Les Hauts de Hurlevent",
+      "author": "Emily Brontë",
+      "genre": "Roman",
+      "year": 1847,
+      "description": "Une histoire de passion et de vengeance sur les landes anglaises.",
+      "image": "https://via.placeholder.com/150?text=Les+Hauts+de+Hurlevent",
+      "quantity": 7
+    },
+    {
+      "title": "Anna Karénine",
+      "author": "Léon Tolstoï",
+      "genre": "Roman",
+      "year": 1877,
+      "description": "Une tragédie sur l'amour et la société russe.",
+      "image": "https://via.placeholder.com/150?text=Anna+Karénine",
+      "quantity": 4
+    },
+    {
+      "title": "Guerre et Paix",
+      "author": "Léon Tolstoï",
+      "genre": "Historique",
+      "year": 1869,
+      "description": "Un récit épique sur la Russie pendant les guerres napoléoniennes.",
+      "image": "https://via.placeholder.com/150?text=Guerre+et+Paix",
+      "quantity": 3
+    },
+    {
+      "title": "Le Vieil Homme et la Mer",
+      "author": "Ernest Hemingway",
+      "genre": "Aventure",
+      "year": 1952,
+      "description": "Un vieux pêcheur lutte pour attraper un poisson géant.",
+      "image": "https://via.placeholder.com/150?text=Le+Vieil+Homme+et+la+Mer",
+      "quantity": 5
+    },
+    {
+      "title": "L'Iliade",
+      "author": "Homère",
+      "genre": "Épopée",
+      "year": -750,
+      "description": "Le récit épique de la guerre de Troie.",
+      "image": "https://via.placeholder.com/150?text=L'Iliade",
+      "quantity": 8
+    },
+    {
+      "title": "Frankenstein",
+      "author": "Mary Shelley",
+      "genre": "Horreur",
+      "year": 1818,
+      "description": "Un scientifique crée un être monstrueux avec des conséquences tragiques.",
+      "image": "https://via.placeholder.com/150?text=Frankenstein",
+      "quantity": 5
+    },
+    {
+      "title": "Dracula",
+      "author": "Bram Stoker",
+      "genre": "Horreur",
+      "year": 1897,
+      "description": "Le classique du vampire et de l'horreur gothique.",
+      "image": "https://via.placeholder.com/150?text=Dracula",
+      "quantity": 4
+    },
+    {
+      "title": "Le Seigneur des Anneaux",
+      "author": "J.R.R. Tolkien",
+      "genre": "Fantasy",
+      "year": 1954,
+      "description": "Une quête épique pour détruire l'Anneau unique.",
+      "image": "https://via.placeholder.com/150?text=Le+Seigneur+des+Anneaux",
+      "quantity": 7
+    },
+    {
+      "title": "Le Hobbit",
+      "author": "J.R.R. Tolkien",
+      "genre": "Fantasy",
+      "year": 1937,
+      "description": "Les aventures de Bilbo Baggins dans un monde fantastique.",
+      "image": "https://via.placeholder.com/150?text=Le+Hobbit",
+      "quantity": 6
+    },
+    {
+      "title": "Harry Potter à l'école des sorciers",
+      "author": "J.K. Rowling",
+      "genre": "Fantasy",
+      "year": 1997,
+      "description": "Les débuts d'Harry Potter à Poudlard, l'école des sorciers.",
+      "image": "https://via.placeholder.com/150?text=Harry+Potter+1",
+      "quantity": 10
+    },
+    {
+      "title": "L'Attrape-Cœurs",
+      "author": "J.D. Salinger",
+      "genre": "Roman",
+      "year": 1951,
+      "description": "Un adolescent en rébellion contre la société.",
+      "image": "https://via.placeholder.com/150?text=L'Attrape-Cœurs",
+      "quantity": 4
+    },
+    {
+      "title": "Les Aventures de Tom Sawyer",
+      "author": "Mark Twain",
+      "genre": "Aventure",
+      "year": 1876,
+      "description": "Les aventures d'un garçon espiègle dans le sud des États-Unis.",
+      "image": "https://via.placeholder.com/150?text=Tom+Sawyer",
+      "quantity": 5
+    },
+    {
+      "title": "Les Aventures d'Alice au pays des merveilles",
+      "author": "Lewis Carroll",
+      "genre": "Fantasy",
+      "year": 1865,
+      "description": "Les aventures fantastiques d'Alice dans un monde merveilleux.",
+      "image": "https://via.placeholder.com/150?text=Alice+au+pays+des+merveilles",
+      "quantity": 6
+    },
+    {
+      "title": "Peter Pan",
+      "author": "J.M. Barrie",
+      "genre": "Fantasy",
+      "year": 1911,
+      "description": "L'histoire du garçon qui ne voulait pas grandir.",
+      "image": "https://via.placeholder.com/150?text=Peter+Pan",
+      "quantity": 7
+    },
+    {
+      "title": "L'Île au trésor",
+      "author": "Robert Louis Stevenson",
+      "genre": "Aventure",
+      "year": 1883,
+      "description": "Une chasse au trésor remplie de pirates et de dangers.",
+      "image": "https://via.placeholder.com/150?text=L'Île+au+trésor",
+      "quantity": 4
+    },
+    {
+      "title": "Le Magicien d'Oz",
+      "author": "L. Frank Baum",
+      "genre": "Fantasy",
+      "year": 1900,
+      "description": "Dorothy et ses amis partent à la recherche du Magicien d'Oz.",
+      "image": "https://via.placeholder.com/150?text=Le+Magicien+d'Oz",
+      "quantity": 6
+    },
+    {
+      "title": "Les Contes de Grimm",
+      "author": "Jacob et Wilhelm Grimm",
+      "genre": "Conte",
+      "year": 1812,
+      "description": "Un recueil de contes classiques pour enfants.",
+      "image": "https://via.placeholder.com/150?text=Contes+de+Grimm",
+      "quantity": 5
+    },
+    {
+      "title": "Les Contes d'Andersen",
+      "author": "Hans Christian Andersen",
+      "genre": "Conte",
+      "year": 1837,
+      "description": "Un recueil de contes célèbres, dont 'La Petite Sirène'.",
+      "image": "https://via.placeholder.com/150?text=Contes+d'Andersen",
+      "quantity": 4
+    },
+    {
+      "title": "Les Mille et Une Nuits",
+      "author": "Anonyme",
+      "genre": "Conte",
+      "year": 800,
+      "description": "Un recueil d'histoires racontées par Shéhérazade pour échapper à la mort.",
+      "image": "https://via.placeholder.com/150?text=Les+Mille+et+Une+Nuits",
+      "quantity": 5
+    },
+    {
+      "title": "Le Livre de la jungle",
+      "author": "Rudyard Kipling",
+      "genre": "Aventure",
+      "year": 1894,
+      "description": "Les aventures de Mowgli, un garçon élevé par des loups dans la jungle.",
+      "image": "https://via.placeholder.com/150?text=Le+Livre+de+la+jungle",
+      "quantity": 6
+    },
+    {
+      "title": "Les Voyages de Gulliver",
+      "author": "Jonathan Swift",
+      "genre": "Aventure",
+      "year": 1726,
+      "description": "Les aventures satiriques de Gulliver dans des terres fantastiques.",
+      "image": "https://via.placeholder.com/150?text=Les+Voyages+de+Gulliver",
+      "quantity": 5
+    }
+  ]
+  

@@ -67,10 +67,10 @@ export default function AddBookPage() {
       quantity: quantity
     };
 
-    // Ajouter le livre au LocalStorage
+    // Récupérer les livres actuels dans LocalStorage
     const books = JSON.parse(localStorage.getItem('books')) || [];
     books.push(newBook);
-    localStorage.setItem('books', JSON.stringify(books));
+    localStorage.setItem('books', JSON.stringify(books)); // Mettre à jour LocalStorage
 
     // Afficher le message de confirmation
     document.getElementById('confirmation-message').style.display = 'block';
